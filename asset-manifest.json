@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/landing-project/static/css/main.583ea686.css",
+    "main.js": "/landing-project/static/js/main.45923fa4.js",
+    "static/js/787.ebbeeddc.chunk.js": "/landing-project/static/js/787.ebbeeddc.chunk.js",
+    "static/media/background.png": "/landing-project/static/media/background.b21bed6043773bc3e68e.png",
+    "index.html": "/landing-project/index.html",
+    "main.583ea686.css.map": "/landing-project/static/css/main.583ea686.css.map",
+    "main.45923fa4.js.map": "/landing-project/static/js/main.45923fa4.js.map",
+    "787.ebbeeddc.chunk.js.map": "/landing-project/static/js/787.ebbeeddc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.583ea686.css",
+    "static/js/main.45923fa4.js"
+  ]
+}
