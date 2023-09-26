@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: left;
+    padding-top: 5vh;
+    padding-left: 5vh;
+
+    background-color: white;
+    
+    color: #7b74a0;
+    font-family: 'Lexend Zetta';
+    font-size: 5vh;
+}

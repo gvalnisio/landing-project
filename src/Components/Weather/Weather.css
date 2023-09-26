@@ -1,10 +1,64 @@
 .weather-box {
-  background-image: linear-gradient(to bottom right, #d1b4f7 0%, #fd8fb9 100%);
-  background-size: cover;
-  border-radius: 12px;
-  margin: auto;
-  padding: 2%;
-  color: white;
+  border: solid 1px #7b74a0;
+  background-color: white;
+  border-radius: 20px;
+  margin: 2vh;
+  padding: 1vh;
 
-  font-family: raleway;
+  color: #7b74a0;
+
+  font-family: 'Quicksand';
+  
+}
+
+.city {
+  font-weight: 500;
+  font-size: larger;
+}
+
+.weather-icon-temp {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vh;
+}
+
+.temperature {
+  font-size: large;
+}
+
+.weather-humid-wind {
+  gap: 2vh;
+}
+
+.weather-humid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-humid img {
+  width: 4vh;
+  height: 4vh;
+}
+
+.weather-wind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-wind img {
+  width: 4vh;
+  height: 4vh;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+
+  
 }

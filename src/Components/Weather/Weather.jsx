@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './Weather.css'
+
+import clear_icon from '../Assets/clear.png'
+import cloud_icon from '../Assets/clouds.png'
+import drizzle_icon from '../Assets/drizzle.png'
+import humidity_icon from '../Assets/humidity.png'
+import rain_icon from '../Assets/rain.png'
+import snow_icon from '../Assets/snow.png'
+import wind_icon from '../Assets/wind.png'
 
 const Weather = () => {
 
     const [lat, setLat] = useState([])
     const [long, setLon] = useState([])
+    const [wicon, setWicon] = useState(cloud_icon)
+    
 
     const search = async () => {
         
@@ -33,25 +41,54 @@ const Weather = () => {
         temperature[0].innerHTML = Math.floor(data.main.temp)+' ºC'
         location[0].innerHTML = data.name
         description[0].innerHTML = data.weather[0].main
+
+        if(data.weather[0].icon === '01d' || data.weather[0].icon === '01n') {
+            setWicon(clear_icon)
+        } else if (data.weather[0].icon === '02d' || data.weather[0].icon === '02n') {
+            setWicon(cloud_icon)
+        } else if (data.weather[0].icon === '03d' || data.weather[0].icon === '03n') {
+            setWicon(drizzle_icon)
+        } else if (data.weather[0].icon === '04d' || data.weather[0].icon === '04n') {
+            setWicon(drizzle_icon)
+        } else if (data.weather[0].icon === '09d' || data.weather[0].icon === '09n') {
+            setWicon(rain_icon)
+        } else if (data.weather[0].icon === '10d' || data.weather[0].icon === '10n') {
+            setWicon(rain_icon)
+        } else if (data.weather[0].icon === '13d' || data.weather[0].icon === '13n') {
+            setWicon(snow_icon)
+        } else {
+            setWicon(clear_icon)
+        }
     }
 
     search()
 
     return (
         <Container fluid className="weather-box">
-            <Row>
-                <Col>
-                <div className="city">Rio de Janeiro</div>
-                <img src="" alt="" className="weather-icon" /></Col>
-            </Row>
-            <Row>
-                <div className="temperature">23 ºC</div>
-                <div className="weather-description">Cloudy</div>
-            </Row>
-            <Row>
-               <Col><div className="humidity">60%</div></Col> 
-               <Col><div className="wind-speed">14 km/h</div></Col>
-            </Row>
+            <div className="city">Rio de Janeiro</div>
+            
+            <div className="weather-container">
+                <div className="weather-icon-temp">
+                    <div >
+                        <img src={wicon} alt="" className="weather-icon" />
+                    </div>
+                    <div>
+                        <div className="temperature">23 ºC</div>
+                        <div className="weather-description">Cloudy</div>
+                    </div>
+                </div>
+                <div className="weather-humid-wind">
+                    <div className="weather-humid">
+                        <img src={humidity_icon} alt="" />
+                        <div className="humidity">60%</div>
+                    </div>
+                    <div className="weather-wind">
+                        <img src={wind_icon} alt="" />
+                        <div className="wind-speed">14 km/h</div>
+                    </div>
+                    
+                </div>
+            </div>
         </Container>
     )
 
