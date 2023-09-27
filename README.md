@@ -1,4 +1,5 @@
 # Personal Hub / Landing Page
+link: https://gvalnisio.github.io/landing-project/
 
 ### Motivation
 This was a quick project idea to show my skills with React and JavaScript, by using Bootstrap, hooks and APIs.
